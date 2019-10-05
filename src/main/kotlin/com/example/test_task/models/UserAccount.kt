@@ -13,5 +13,5 @@ data class UserAccount(
         val name: String,
 
         @Column(nullable = false)
-        val amount: BigDecimal = BigDecimal.ZERO
+        var amount: BigDecimal = BigDecimal.ZERO
 )
