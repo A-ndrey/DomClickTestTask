@@ -45,7 +45,7 @@ class UserAccountService(private val userAccountRepository: UserAccountRepositor
         if (userAccount.amount >= amount) {
             block()
         } else {
-            throw RuntimeException("User with id: ${userAccount.id} haven't enough money.")
+            throw IllegalArgumentException("User with id: ${userAccount.id} haven't enough money.")
         }
     }
 
